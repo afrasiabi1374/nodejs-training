@@ -1,4 +1,3 @@
-> Meisam Monsef:
 ch01 : 
 
 http://cafenode.ir/NodeJS-Class/ch01/01.zip
@@ -75,16 +74,7 @@ http://cafenode.ir/NodeJS-Class/ch14/14.zip
 username : 66cdbdcd87ade97b805
 password : c1983abe834c9f9b139645b574657c0f149b0e9c6218c
 
-> Meisam Monsef:
-اگر مشکلی یا سوالی بود همینجا برای من بفرستید
 
-> Mr Dev:
-چشم استاد خیلی ممنونم.
-
-> Meisam Monsef:
-سلام
-
-> Meisam Monsef:
 ch15 : 
 http://cafenode.ir/NodeJS-Class/ch15/15.zip
 username : a46938f2452404f
