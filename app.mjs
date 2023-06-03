@@ -1,5 +1,7 @@
 import application from "./application.mjs"
 import { log } from "./core/utils.mjs"
+import fileUpload from "express-fileupload"
+
 async function main()
 {
     try {
