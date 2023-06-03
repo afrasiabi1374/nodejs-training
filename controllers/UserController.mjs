@@ -1,5 +1,7 @@
 import BaseController from "../core/BaseController.mjs";
 import { validationResult, body, query, param, header } from "express-validator";
+import translate from "../core/translate.mjs";
+import { log } from "../core/utils.mjs";
 
 class UserController extends BaseController
 {
@@ -22,7 +24,11 @@ class UserController extends BaseController
             }
 
             const username = super.input(req.query.username)
-            return res.render('user/login.html')
+            const data = {
+                "username": translate.get('username')
+            }
+            log(data)
+            return res.render('user/login.html', data)
         } catch (e) {
             super.toError(e, req, res)
         }

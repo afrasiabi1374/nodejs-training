@@ -18,13 +18,13 @@ export default class BaseController
         try {
             const debug = getEnv('DEBUG', 'bool')
             log(debug)
-            if (getEnv('DEBUG', 'bool')) {
+            if (debug) {
                 return res.status(500).send(error.toString())
             } else {
                 return res.status(500).send('Internal Server Error !')
             }
         } catch (e) {
-            if (getEnv('DEBUG', 'bool')) {
+            if (debug) {
                 return res.status(500).send(e.toString())
             } else {
                 return res.status(500).send('Internal Server Error !')

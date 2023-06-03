@@ -25,7 +25,7 @@ class Application {
         this.#app.use(Express.urlencoded({extended: true, limit: '10mb'}))
         this.#app.use(Express.json({limit: '10mb'}))
         const templateDir = `templates/${getEnv('TEMPLATE')}/`
-        log(templateDir)
+        // log(templateDir)
         this.#templateEngine = nunjucks.configure(templateDir, {
             autoescape: true,
             express: this.#app,
@@ -44,7 +44,7 @@ class Application {
         this.#app.use(Error500Controller.handle)
     }
     async run(){
-        log(`application is run`);
+        // log(`application is run`);
         const g = getEnv('LIST')
         const PORT = getEnv('PORT', 'number')
         this.#app.listen(PORT, async() => {
