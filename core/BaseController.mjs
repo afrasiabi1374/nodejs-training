@@ -3,6 +3,7 @@ import DotenvExpand from 'dotenv-expand'
 const env = dotenv.config()
 DotenvExpand.expand(env)
 import autoBind from 'auto-bind'
+import {getEnv, log} from './utils.mjs'
 export default class BaseController
 {
     constructor()
@@ -15,9 +16,19 @@ export default class BaseController
     toError(error, req, res)
     {
         try {
-            return res.status(500).send(error.toString())
+            const debug = getEnv('DEBUG', 'bool')
+            log(debug)
+            if (getEnv('DEBUG', 'bool')) {
+                return res.status(500).send(error.toString())
+            } else {
+                return res.status(500).send('Internal Server Error !')
+            }
         } catch (e) {
-            return res.status(500).send(e.toString())
+            if (getEnv('DEBUG', 'bool')) {
+                return res.status(500).send(e.toString())
+            } else {
+                return res.status(500).send('Internal Server Error !')
+            }
         }
     }
     input(field){
