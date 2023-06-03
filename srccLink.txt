@@ -1,0 +1,150 @@
+ch01 : 
+
+http://cafenode.ir/NodeJS-Class/ch01/01.zip
+username : ba81bf5f9775c95e8e40
+password : 807d671b20f8a86c556f4e974e345fd0f717a583
+
+
+ch02 : 
+http://cafenode.ir/NodeJS-Class/ch02/02.zip
+username : 7c3caa4bcee8e1def6f7
+password : be712b3d1267133d418d4c9bd2bcece6f8caae64
+
+
+ch03 : 
+http://cafenode.ir/NodeJS-Class/ch03/03.zip
+username : 9e3b08163cb9a4884
+password : a95d054f7f0c71dac910369e0bf86bb2b336264a
+
+ch04 : 
+http://cafenode.ir/NodeJS-Class/ch04/04.zip
+username : d2486271508087
+password : d1d45796b3a3a039e957b0e8216edb861a461614
+
+ch05 : 
+http://cafenode.ir/NodeJS-Class/ch05/05.zip
+username : c212b25a970bd5
+password : 43cfd2685c4282f9dd7d22912749a868fb02bbc
+
+ch06 : 
+http://cafenode.ir/NodeJS-Class/ch06/06.zip
+username : c9fef676027e79a27d
+password : dbd2dc5614af7fee30bdcac2d89105d40576d780
+
+
+ch07 : 
+http://cafenode.ir/NodeJS-Class/ch07/ch07.zip
+username : 9c262c51e034394
+password : 56adfca85d112b7f3114bdbfdba7860f5b812d18
+
+ch08 : 
+http://cafenode.ir/NodeJS-Class/ch08/ch08.zip
+username : a2f8dc36590c01ca
+password : 2dfdf7c9952dfe059f338bba9e003e1240975a03
+
+
+ch09 : 
+http://cafenode.ir/NodeJS-Class/ch09/09.zip
+username : 4e870dd66e450765799
+password : 1e33897dd4bf65e2b225810bc669907d5e4
+
+ch10 : 
+http://cafenode.ir/NodeJS-Class/ch10/10.zip
+username : f648ab5d4854aa8ed
+password : da31b2947ebca8bfeda8848dc6d1223247550162842d20220a1e1cacf
+
+
+ch11 : 
+http://cafenode.ir/NodeJS-Class/ch11/11.zip
+username : 8d49ecf2128fae
+password : a9b23347453bfe0a250cd608de0c31
+
+ch12 : 
+http://cafenode.ir/NodeJS-Class/ch12/12.zip
+username : 73fff49f2435d99e95
+password : ebe697da6a7028a39849c673ca6d0770b2aac430
+
+ch13 : 
+http://cafenode.ir/NodeJS-Class/ch13/13.zip
+username : b085e8c96c1020089
+password : e7c5d19776f6d6ab7a3474da63f569d07a8051c6d442832
+
+ch14 : 
+http://cafenode.ir/NodeJS-Class/ch14/14.zip
+username : 66cdbdcd87ade97b805
+password : c1983abe834c9f9b139645b574657c0f149b0e9c6218c
+
+
+ch15 : 
+http://cafenode.ir/NodeJS-Class/ch15/15.zip
+username : a46938f2452404f
+password : 92b7780d42dea1dc8d7cc2f8980467
+
+ch16 : 
+http://cafenode.ir/NodeJS-Class/ch16/16.zip
+username : 049e2089cbc5e570ef2b11
+password : 4a15a3f5d69c26519d1ec135882c6b4ecbc53fe
+
+
+ch17 : 
+http://cafenode.ir/NodeJS-Class/ch17/17.zip
+username : 34b2b369751819d
+password : ca7a23f0e4ce78da12fb87fd1f8a
+
+ch18 : 
+http://cafenode.ir/NodeJS-Class/ch18/18.zip
+username : 167d80d4737c32000
+password : 2ca220e3cda753209b00e061014b4b49e1c7a
+
+ch19 : 
+http://cafenode.ir/NodeJS-Class/ch19/19.zip
+username : c686a345e0870404
+password : 843a076c1876bdb70d795970bb19eb368
+
+
+ch20 : 
+http://cafenode.ir/NodeJS-Class/ch20/ch20.zip
+username : 22671f8aea9a64631ae
+password : ff2300786c6241fd91cec0b7256427b6149649f85b9f7
+
+
+ch21 : 
+http://cafenode.ir/NodeJS-Class/ch21/21.zip
+username : b8da0d53dca0c1e3330
+password : 5350f231aa0eb1087d7c7149d486c95cf0d831112c54a
+
+
+ch22 : 
+http://cafenode.ir/NodeJS-Class/ch22/ch22.zip
+username : 16efcdaad8052a0
+password : da7bcd7d75e465f33cb8e80edeab390b063300b7143dbc769
+
+
+ch23 : 
+http://cafenode.ir/NodeJS-Class/ch23/23.zip
+username : aeb41a33231cb
+password : 337f9153dac36ecc597f1d962ba
+
+
+ch24 : 
+http://cafenode.ir/NodeJS-Class/ch24/ch24.zip
+username : e3b0c44298fc1c149a
+password : fbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+
+ch25 : 
+http://cafenode.ir/NodeJS-Class/ch25/ch25.zip
+username : 0efdab5e0226041e12462d712
+password : 0f21a2828c70a5c0ce811f13480d466ae383ba2
+
+
+ch26 : 
+http://cafenode.ir/NodeJS-Class/ch26/26.zip
+username : e04f0d18bb4c60f43d4d
+password : e7a06b45c4cd3c15f3266d97
+
+
+ch27 : 
+http://cafenode.ir/NodeJS-Class/ch27/ch27.zip
+username : b9a6d5a917acfba3602
+password : 4fca8072afbe649b77f128896e54803a782c931e1dc7e
