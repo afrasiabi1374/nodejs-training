@@ -13,9 +13,9 @@ class Translate
                 }
             }
         })
-
         i18next.changeLanguage(getEnv('APP_LANG'))
     }
+    
     changeLanguage(lang)
     {
         i18next.changeLanguage(getEnv('APP_LANG'))

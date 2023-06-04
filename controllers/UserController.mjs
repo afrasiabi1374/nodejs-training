@@ -27,7 +27,7 @@ class UserController extends BaseController
             const data = {
                 "username": translate.get('username')
             }
-            log(data)
+            log(data.user)
             return res.render('user/login.html', data)
         } catch (e) {
             super.toError(e, req, res)
