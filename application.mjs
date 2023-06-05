@@ -6,7 +6,13 @@ import Error500 from "./controllers/Error500Controller.mjs";
 import Error404Controller from "./controllers/Error404Controller.mjs";
 import Error500Controller from "./controllers/Error500Controller.mjs";
 import fileUpload from "express-fileupload";
+import translate from "./core/translate.mjs";
+import * as fs from './core/fs.mjs'
 
+log(fs.fileExists('./a'));
+log(fs.fileExists('./a'));
+log(fs.isDirectory('./a'));
+log(fs.unlink('./b'));
 
 class Application {
     #app = null
@@ -26,15 +32,16 @@ class Application {
         this.#app.use(Express.json({limit: '10mb'}))
         const templateDir = `templates/${getEnv('TEMPLATE')}/`
         // log(templateDir)
+        this.#app.use(fileUpload({
+            useTempFiles: true,
+            tempFileDir: '/tmp/'
+        }))
         this.#templateEngine = nunjucks.configure(templateDir, {
             autoescape: true,
             express: this.#app,
             noCache: false
         })
-        this.#app.use(fileUpload({
-            useTempFiles: true,
-            tempFileDir: '/tmp/'
-        }))
+        this.#templateEngine.addGlobal('t', translate.t)
     }
     async #initRoute()
     {

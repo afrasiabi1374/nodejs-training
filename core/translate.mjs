@@ -1,7 +1,8 @@
 import i18next from "i18next";
 import { getEnv, log } from "./utils.mjs";
 import fa from "../langs/fa/fa.mjs";
-// log(fa)
+import en from "../langs/en/en.mjs";
+log(fa)
 class Translate 
 {
     constructor()
@@ -10,6 +11,9 @@ class Translate
             resources: {
                 fa: {
                     translation: fa
+                },
+                en: {
+                    translation: en
                 }
             }
         })
@@ -21,7 +25,7 @@ class Translate
         i18next.changeLanguage(getEnv('APP_LANG'))
     }
 
-    get(key, data={}){
+    t(key, data={}){
         return i18next.t(key,data)
     }
 }

@@ -1,4 +1,3 @@
 export default {
-    "title": "تیتر",
-    "username": "نام کاربری"   
+    "title": "ورود {{x}}",
 }
