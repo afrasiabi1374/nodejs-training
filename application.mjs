@@ -1,4 +1,4 @@
-import { getEnv, log } from "./core/utils.mjs";
+import { getEnv, log, sleep } from "./core/utils.mjs";
 import  Express  from "express";
 import route from "./routes/route.mjs";
 import nunjucks from 'nunjucks'
@@ -8,7 +8,9 @@ import Error500Controller from "./controllers/Error500Controller.mjs";
 import fileUpload from "express-fileupload";
 import translate from "./core/translate.mjs";
 import * as fs from './core/fs.mjs'
-
+import crypto from "./core/crypto.mjs";
+log(crypto.toBase64('salam ali khoobi?'))
+log(crypto.fromBase64('c2FsYW0gYWxpIGtob29iaT8='))
 log(fs.fileExists('./a'));
 log(fs.fileExists('./a'));
 log(fs.isDirectory('./a'));
@@ -51,7 +53,8 @@ class Application {
         this.#app.use(Error500Controller.handle)
     }
     async run(){
-        // log(`application is run`);
+        log(`application is run`);
+        log('ok2')
         const g = getEnv('LIST')
         const PORT = getEnv('PORT', 'number')
         this.#app.listen(PORT, async() => {

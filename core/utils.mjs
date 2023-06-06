@@ -31,3 +31,12 @@ export function toNumber(str){
         return 0
     }
 }
+
+export function sleep(ms)
+{
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(true)
+        }, ms);
+    })
+}
