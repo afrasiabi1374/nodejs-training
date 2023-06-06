@@ -6,7 +6,7 @@ export function isFile(path)
     try {
         return fs.lstatSync(path).isFile()
     } catch (e) {
-        throw false
+        return false
     }
 }
 
@@ -15,7 +15,7 @@ export function isDirectory(path)
     try {
         return fs.lstatSync(path).isDirectory()
     } catch (e) {
-        throw false
+        return false
     }
 }
 
@@ -28,7 +28,7 @@ export function fileExists(path)
             return false
         }
     } catch (e) {
-        throw false
+        return false
     }
 }
 
@@ -43,6 +43,6 @@ export function unlink(path)
             return false
         }
     } catch (e) {
-        throw false
+        return false
     }
 }
