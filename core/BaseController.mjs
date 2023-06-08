@@ -17,7 +17,7 @@ export default class BaseController
     {
         try {
             const debug = getEnv('DEBUG', 'bool')
-            log(debug)
+            // log(debug)
             if (debug) {
                 return res.status(500).send(error.toString())
             } else {

@@ -9,12 +9,9 @@ import fileUpload from "express-fileupload";
 import translate from "./core/translate.mjs";
 import * as fs from './core/fs.mjs'
 import crypto from "./core/crypto.mjs";
-log(crypto.toBase64('salam ali khoobi?'))
-log(crypto.fromBase64('c2FsYW0gYWxpIGtob29iaT8='))
-log(fs.fileExists('./a'));
-log(fs.fileExists('./a'));
-log(fs.isDirectory('./a'));
-log(fs.unlink('./b'));
+
+log(crypto.encryption('meisam123', 'salam!salam!salam!salam!'))
+log(crypto.decription('meisam123','S1FBYitiZk1hWnhFUUxUZ0l0UUFHSlZvT00yWXNXUjhVbXdNeU5lRFJ6cz0'))
 
 class Application {
     #app = null
@@ -26,7 +23,7 @@ class Application {
     }
 
     async #initExpress() {
-        log(`application is CALL`);
+        // log(`application is CALL`);
         this.#app = Express()
         this.#app.use(Express.static('assets'))
         this.#app.use(Express.static('media'))
@@ -53,8 +50,8 @@ class Application {
         this.#app.use(Error500Controller.handle)
     }
     async run(){
-        log(`application is run`);
-        log('ok2')
+        // log(`application is run`);
+        // log('ok2')
         const g = getEnv('LIST')
         const PORT = getEnv('PORT', 'number')
         this.#app.listen(PORT, async() => {
@@ -62,4 +59,5 @@ class Application {
         })
     }
 }
+
 export default new Application()

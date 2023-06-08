@@ -2,7 +2,7 @@ import i18next from "i18next";
 import { getEnv, log } from "./utils.mjs";
 import fa from "../langs/fa/fa.mjs";
 import en from "../langs/en/en.mjs";
-log(fa)
+// log(fa)
 class Translate 
 {
     constructor()
