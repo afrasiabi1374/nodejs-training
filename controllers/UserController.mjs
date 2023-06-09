@@ -26,7 +26,7 @@ class UserController extends BaseController
 
             const username = super.input(req.query.username)
             const data = {
-                "username": translate.t('user.title', {"x": "x is ok!"})
+                "username": username
             }
             // log(data.user)
             return res.render('user/login.html', data)
