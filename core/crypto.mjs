@@ -38,9 +38,15 @@ class Crypto
             const hashKey = this.hash(key)
             const key2 = hashKey.substring(0,32)
             const iv = hashKey.slice(32, -16)
+            const data2 = {
+                "a": Math.random(),
+                "message": data,
+                "z": Math.random()
+            }
+            const dataFinal = JSON.stringify(data2)
             console.log(Buffer.from(key2));
             const cipher = crypto.createCipheriv('aes-256-cbc', Buffer.from(key2), iv)
-            let encrypted = cipher.update(data, 'utf8', 'base64')
+            let encrypted = cipher.update(dataFinal, 'utf8', 'base64')
             encrypted += cipher.final('base64')
             return this.toBase64(encrypted)
         } catch (e) {
@@ -54,12 +60,14 @@ class Crypto
             const iv = hashKey.slice(32, -16)
             data = this.fromBase64(data)
             const decipher = crypto.createDecipheriv('aes-256-cbc', Buffer.from(key2), iv)
-            let decripted =  decipher.update(data, 'base64')
+            let decripted =  decipher.update(data, 'base64', 'utf8')
             decripted+=decipher.final('utf8')
-            return decripted
+            console.log(decripted);
+            decripted = JSON.parse(decripted)
+            return decripted?.message ?? ''
 
         } catch (e) {
-            
+            return e
         }
     }
 }

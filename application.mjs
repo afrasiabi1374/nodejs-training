@@ -10,8 +10,8 @@ import translate from "./core/translate.mjs";
 import * as fs from './core/fs.mjs'
 import crypto from "./core/crypto.mjs";
 
-log(crypto.encryption('meisam123', 'salam!salam!salam!salam!'))
-log(crypto.decription('meisam123','S1FBYitiZk1hWnhFUUxUZ0l0UUFHSlZvT00yWXNXUjhVbXdNeU5lRFJ6cz0'))
+// log(crypto.encryption('meisam123', 'salam!salam!salam!salam! '))
+log(crypto.decription('meisam123','em50cmJOR1hzNWNiNnFwVU1UZTJPQmN5anhzKy9STVFtandSVmJqQ0l4aFpvbG1hZVNqeUxzTWZqU3podUZCTHNPMVRSLzZJNTFhTmlZdmlIZVprRDF4eVJqb21FR1lYWjFldlM1WWU1c2F2ZUhLbXpLaUtONXVRN3BmenREWWg'))
 
 class Application {
     #app = null
