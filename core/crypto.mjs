@@ -62,7 +62,6 @@ class Crypto
             const decipher = crypto.createDecipheriv('aes-256-cbc', Buffer.from(key2), iv)
             let decripted =  decipher.update(data, 'base64', 'utf8')
             decripted+=decipher.final('utf8')
-            console.log(decripted);
             decripted = JSON.parse(decripted)
             return decripted?.message ?? ''
 

@@ -9,9 +9,11 @@ import fileUpload from "express-fileupload";
 import translate from "./core/translate.mjs";
 import * as fs from './core/fs.mjs'
 import crypto from "./core/crypto.mjs";
-
+import datetime from "./core/datetime.mjs";
 // log(crypto.encryption('meisam123', 'salam!salam!salam!salam! '))
-log(crypto.decription('meisam123','em50cmJOR1hzNWNiNnFwVU1UZTJPQmN5anhzKy9STVFtandSVmJqQ0l4aFpvbG1hZVNqeUxzTWZqU3podUZCTHNPMVRSLzZJNTFhTmlZdmlIZVprRDF4eVJqb21FR1lYWjFldlM1WWU1c2F2ZUhLbXpLaUtONXVRN3BmenREWWg'))
+// log(crypto.decription('meisam123','em50cmJOR1hzNWNiNnFwVU1UZTJPQmN5anhzKy9STVFtandSVmJqQ0l4aFpvbG1hZVNqeUxzTWZqU3podUZCTHNPMVRSLzZJNTFhTmlZdmlIZVprRDF4eVJqb21FR1lYWjFldlM1WWU1c2F2ZUhLbXpLaUtONXVRN3BmenREWWg'))
+log(datetime.toString('YYYY-MM-DD HH:mm:ss'))
+log(datetime.toDataTime('1990-01-05 20:10:25').format('YYYY-MM-DD HH:mm:ss'))
 
 class Application {
     #app = null
@@ -52,6 +54,7 @@ class Application {
     async run(){
         // log(`application is run`);
         // log('ok2')
+        log(datetime.getTimeStamp())
         const g = getEnv('LIST')
         const PORT = getEnv('PORT', 'number')
         this.#app.listen(PORT, async() => {
