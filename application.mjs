@@ -13,8 +13,9 @@ import datetime from "./core/datetime.mjs";
 // log(crypto.encryption('meisam123', 'salam!salam!salam!salam! '))
 // log(crypto.decription('meisam123','em50cmJOR1hzNWNiNnFwVU1UZTJPQmN5anhzKy9STVFtandSVmJqQ0l4aFpvbG1hZVNqeUxzTWZqU3podUZCTHNPMVRSLzZJNTFhTmlZdmlIZVprRDF4eVJqb21FR1lYWjFldlM1WWU1c2F2ZUhLbXpLaUtONXVRN3BmenREWWg'))
 log(datetime.toString('YYYY-MM-DD HH:mm:ss'))
-log(datetime.toDataTime('1990-01-05 20:10:25').format('YYYY-MM-DD HH:mm:ss'))
-
+log(datetime.toDataTime('1990-01-05 20:10:25').add('10', 'day').add('5', 'hour').format('YYYY-MM-DD HH:mm:ss'))
+log(datetime.toJalaali('1996-02-06'))
+log(datetime.toGregorian('1374-11-17'))
 class Application {
     #app = null
     #templateEngine = null

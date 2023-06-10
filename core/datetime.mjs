@@ -1,6 +1,7 @@
 import moment from "moment"
 import momentTimeZone from "moment-timezone"
 import {getEnv} from './utils.mjs'
+import momentjalaali from 'moment-jalaali'
 class DateTime {
     #timeZone = null
     constructor()
@@ -23,11 +24,29 @@ class DateTime {
             
         }
     }
-    toDataTime(){
+    toDataTime(datetime = ''){
         try {
-            return moment.tz(this.#timeZone)
+            // اگه خالی بود زمان جاریو بده نبود زمان سفارشی
+            return (datetime === '') ? moment.tz(this.#timeZone) : moment.tz(datetime, this.#timeZone)
         } catch (e) {
             
+        }
+    }
+    toJalaali(str, format = 'jYYYY-jMM-jDD'){
+        // میلادی به جلالی
+        try {
+            return momentjalaali(str).format(format)
+        } catch (e) {
+            return ''
+        }
+    }
+    //
+    toGregorian(str, format = 'YYYY-MM-DD '){
+        // جلالی به میلادی
+        try {
+            return momentjalaali(str, 'jYYYY-jMM-jDD').format(format)
+        } catch (e) {
+            return ''
         }
     }
 }
