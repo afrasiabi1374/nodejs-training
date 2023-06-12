@@ -40,3 +40,20 @@ export function sleep(ms)
         }, ms);
     })
 }
+
+export function random(min, max){
+    try {
+        return Math.floor(
+            Math.random()*(max-min+1)+min
+        )
+    } catch (e) {
+        return 0
+    }
+}
+export function stringify(obj) {
+    try {
+        return JSON.stringify(obj)
+    } catch (e) {
+        return ''
+    }
+}

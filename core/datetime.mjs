@@ -49,5 +49,6 @@ class DateTime {
             return ''
         }
     }
+    
 }
 export default new DateTime()
