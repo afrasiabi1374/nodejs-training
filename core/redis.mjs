@@ -1,21 +1,19 @@
 import ioredis from 'ioredis'
-import { log, stringify, toNumber } from './utils.mjs'
-
+import {  log, stringify, toNumber, isJSON, toJSON } from './utils.mjs'
 class Redis
 {
-
     #URI=null
     #redis = null
-    constructor(URI)
+    get redis()
     {
-        this.#URI = URI
+        return this.#redis
     }
-    async connect(){
+    async connect(URI){
         try {
             try {
+                this.#URI = URI
                 this.#redis = new ioredis(this.#URI, {lazyConnect: true})
                 this.#redis.connect()
-                log(re)
                 return true
             } catch (e) {
                 return false
@@ -47,11 +45,25 @@ class Redis
     async get(key){
         try {
             const result = await this.#redis.get(key)
-            console.log(result);
+            log(isJSON(result))
+            if (result) {
+                    return isJSON(result) ? toJSON(result) : result
+            } else {
+                return ''
+            }
         } catch (e) {
             return ''
         }
     }
-
+    async del(key)
+    {
+        try {
+            await this.#redis.del(key)
+            return true
+        } catch (error) {
+            return false
+        }
+    }
 }
-export default Redis
+const RedisObject = new Redis()
+export {RedisObject as Redis}

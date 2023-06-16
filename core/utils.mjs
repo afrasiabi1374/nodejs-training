@@ -57,3 +57,22 @@ export function stringify(obj) {
         return ''
     }
 }
+
+export   function isJSON(str)
+{
+    try {
+        JSON.parse(str)
+    } catch (e) {
+        return false
+    }
+    return true
+}
+
+export   function toJSON(str)
+{
+    try {
+       return JSON.parse(str)
+    } catch (e) {
+        return {}
+    }
+}

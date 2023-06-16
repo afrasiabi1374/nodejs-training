@@ -1,4 +1,4 @@
-import { getEnv, log, random, sleep } from "./core/utils.mjs";
+import { getEnv, isJSON, log, random, sleep } from "./core/utils.mjs";
 import  Express  from "express";
 import route from "./routes/route.mjs";
 import nunjucks from 'nunjucks'
@@ -10,7 +10,7 @@ import translate from "./core/translate.mjs";
 import * as fs from './core/fs.mjs'
 import crypto from "./core/crypto.mjs";
 import datetime from "./core/datetime.mjs";
-import Redis from "./core/redis.mjs";
+import {Redis} from "./core/redis.mjs";
 // log(crypto.encryption('meisam123', 'salam!salam!salam!salam! '))
 // log(crypto.decription('meisam123','em50cmJOR1hzNWNiNnFwVU1UZTJPQmN5anhzKy9STVFtandSVmJqQ0l4aFpvbG1hZVNqeUxzTWZqU3podUZCTHNPMVRSLzZJNTFhTmlZdmlIZVprRDF4eVJqb21FR1lYWjFldlM1WWU1c2F2ZUhLbXpLaUtONXVRN3BmenREWWg'))
 // log(datetime.toString('YYYY-MM-DD HH:mm:ss'))
@@ -55,17 +55,12 @@ class Application {
         this.#app.use(Error500Controller.handle)
     }
     async run(){
-        // log(`application is run`);
-        // log('ok2')
-        log(datetime.getTimeStamp())
-        const r = new Redis(getEnv('REDIS_URI'))
-        await r.connect()
-        r.set("q100", {"a": "ali", "x": "www"}, 100)
-        r.set("q101", "salam ali")
-        r.set("q102", ["ali", "reza"])
-        log(r.get("q100"))
-        log(r.get("q101"))
-        log(r.get("q102"))
+
+        const redisStatus = await Redis.connect(getEnv('REDIS_URI'))
+        if (!redisStatus) {
+            log('redis can not call !')
+            process.exit(-1)
+        }
         
         const PORT = getEnv('PORT', 'number')
         this.#app.listen(PORT, async() => {
