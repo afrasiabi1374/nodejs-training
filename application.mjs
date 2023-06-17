@@ -62,11 +62,15 @@ class Application {
             process.exit(-1)
         }
         
+        await Redis.setHash("php",{"v1": "version5", "v2": "version7"})
+        log(await Redis.getHash('php'))
+        await Redis.delHash('user1', 'fn', 'ln')
         const PORT = getEnv('PORT', 'number')
         this.#app.listen(PORT, async() => {
             log(`app listen on port = > ${PORT} `)
         })
     }
+
 }
 
 export default new Application()

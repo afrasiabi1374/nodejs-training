@@ -64,6 +64,48 @@ class Redis
             return false
         }
     }
+    async keys(pattern){
+        // این تابع سمت کلاینت استفاده نشه مشکل امنیتی داره
+        try{
+           return await this.#redis.keys(pattern)
+        }
+        catch (e)
+        {
+            return e
+        }
+    }
+    async setHash(key, data = {}, ex)
+    {
+        try {
+            ex = toNumber(ex) > 0 ? ex : 0
+            await this.#redis.hset(key, data)
+            if (ex > 0) {
+                await this.#redis.expire(key, ex)
+            }
+            return true
+        } catch (e) {
+            return e
+        }
+    }
+
+    async getHash(key)
+    {
+        try {
+            return await this.#redis.hgetall(key)
+        } catch (e) {
+            return e
+        }
+    }
+
+    async delHash(key, ...fields)
+    {
+        try {
+             await this.#redis.hdel(key, fields)
+             return true
+        } catch (e) {
+            return false
+        }
+    }
 }
 const RedisObject = new Redis()
 export {RedisObject as Redis}
